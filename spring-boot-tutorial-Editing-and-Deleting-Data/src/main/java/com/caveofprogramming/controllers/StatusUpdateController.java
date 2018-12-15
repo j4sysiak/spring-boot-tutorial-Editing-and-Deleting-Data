@@ -22,6 +22,16 @@ public class StatusUpdateController {
 	private StatusUpdateService statusUpdateService;
 
 	
+	@RequestMapping(value ="/deletestatus", method=RequestMethod.GET)
+	ModelAndView deleteStatus(ModelAndView modelAndView, @RequestParam(name="id") Long id) {
+		
+		statusUpdateService.delete(id);
+		
+		modelAndView.setViewName("redirect:/viewstatus");
+		
+		return modelAndView;
+	}
+	
 	@RequestMapping(value = "/viewstatus", method = RequestMethod.GET)
 	ModelAndView viewStatus(ModelAndView modelAndView, @RequestParam(name="p", defaultValue="1") int pageNumber) {
 		
