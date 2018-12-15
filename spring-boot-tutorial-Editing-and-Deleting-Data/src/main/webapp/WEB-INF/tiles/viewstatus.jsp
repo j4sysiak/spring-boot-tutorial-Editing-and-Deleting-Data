@@ -30,7 +30,7 @@
 
 				<div class="panel-body">
 
-					<c:out value="${statusUpdate.text}" />
+					 ${statusUpdate.text}
 
 				</div>
 
