@@ -26,8 +26,8 @@
 
 					<div class="errors">
 						<form:errors path="text" />
-						<form:errors path="id" />
-						<form:errors path="added" />
+<%-- 						<form:errors path="id" /> --%>
+<%-- 						<form:errors path="added" /> --%>
 					</div>
 					<div class="form-group">
 						<form:textarea path="text" name="text" rows="10" cols="50"></form:textarea>
