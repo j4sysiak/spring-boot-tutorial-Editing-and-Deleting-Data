@@ -31,34 +31,9 @@
 					<input type="submit" name="submit" value="Add Status" />
 				</form:form>
 
-			 
-
-
 		</div>
-
-		<div class="panel panel-default">
-
-			<div class="panel-heading">
-				<div class="panel-title">
-					Status update added on
-					<fmt:formatDate pattern="EEEE d MMMM y 'at' H:mm:s"
-						value="${latestStatusUpdate.added}" />
-				</div>
-			</div>
-
-			<div class="panel-body">
-
-				<c:out value="${latestStatusUpdate.text}" />
-
-			</div>
-
-
-		</div>
-
 
 	</div>
-
-
 
 </div>
 
