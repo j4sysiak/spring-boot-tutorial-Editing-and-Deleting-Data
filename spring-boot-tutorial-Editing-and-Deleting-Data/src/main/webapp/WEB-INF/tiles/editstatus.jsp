@@ -14,7 +14,7 @@
 		<div class="panel panel-default">
 
 			<div class="panel-heading">
-				<div class="panel-title">Add a Status Update</div>
+				<div class="panel-title">Edit Status</div>
 			</div>
 
 		 
@@ -28,7 +28,7 @@
 						<form:textarea path="text" name="text" rows="10" cols="50"></form:textarea>
 					</div>
 
-					<input type="submit" name="submit" value="Add Status" />
+					<input type="submit" name="submit" value="Save" />
 				</form:form>
 
 		</div>
