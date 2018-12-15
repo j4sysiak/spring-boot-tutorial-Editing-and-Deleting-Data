@@ -1,5 +1,7 @@
 package com.caveofprogramming.controllers;
 
+import java.util.Optional;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,17 @@ public class StatusUpdateController {
 	@Autowired
 	private StatusUpdateService statusUpdateService;
 
+	@RequestMapping(value="/editstatus", method=RequestMethod.GET)
+	ModelAndView editStatus(ModelAndView modelAndView, @RequestParam(name="id") Long id) {
+		
+		Optional<StatusUpdate> statusUpdate = statusUpdateService.get(id);
+		
+		modelAndView.getModel().put("statusUpdate", statusUpdate);
+		
+		modelAndView.setViewName("app.editStatus");
+		
+		return modelAndView;
+	}
 	
 	@RequestMapping(value ="/deletestatus", method=RequestMethod.GET)
 	ModelAndView deleteStatus(ModelAndView modelAndView, @RequestParam(name="id") Long id) {
